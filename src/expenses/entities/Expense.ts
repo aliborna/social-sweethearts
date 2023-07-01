@@ -1,6 +1,6 @@
-import { ExpenseType, Expense } from "../interfaces/interfaces";
+import { ExpenseType, IExpense } from "../interfaces/interfaces";
 
-class ConcreteExpense implements Expense {
+class ConcreteExpense implements IExpense {
   private amount: number;
   private type: ExpenseType;
 

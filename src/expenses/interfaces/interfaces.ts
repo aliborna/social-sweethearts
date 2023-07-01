@@ -1,11 +1,11 @@
-export interface Expense {
+export interface IExpense {
   getAmount(): number;
   isMeal(): boolean;
   isOverExpense(): string;
 }
 
 export interface Calculator {
-  calculate(expenses: Expense[]): number
+  calculate(expenses: IExpense[]): number
 }
 
 export enum ExpenseType {

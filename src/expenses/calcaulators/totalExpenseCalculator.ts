@@ -1,9 +1,9 @@
-import { Expense, Calculator } from '../interfaces/interfaces'
+import { IExpense, Calculator } from '../interfaces/interfaces'
 
 class TotalExpenseCalculator implements Calculator {
   
   
-  public calculate(expenses: Expense[]): number {
+  public calculate(expenses: IExpense[]): number {
     let total = 0;
     
     for (const expense of expenses) {
