@@ -4,6 +4,10 @@ export interface Expense {
   isOverExpense(): string;
 }
 
+export interface Calculator {
+  calculate(expenses: Expense[]): number
+}
+
 export enum ExpenseType {
   BREAKFAST = 1,
   LUNCH = 2,

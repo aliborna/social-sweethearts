@@ -1,9 +1,9 @@
-import { Expense } from '../interfaces/interfaces'
+import { Expense, Calculator } from '../interfaces/interfaces'
 
-class MealExpenseCalculator {
+class MealExpenseCalculator implements Calculator {
   
   
-  static calculate(expenses: Expense[]): number {
+  public calculate(expenses: Expense[]): number {
     let total = 0;
     
     for (const expense of expenses) {

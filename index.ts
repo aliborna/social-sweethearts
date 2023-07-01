@@ -1,18 +1,10 @@
-import InputFactory from './src/expenses/Factories/InputFactory';
-import TotalExpenseCalculator from './src/expenses/calcaulators/totalExpenseCalculator'
-import MealExpenseCalculator from './src/expenses/calcaulators/mealExpenseCalculator'
+import ReportFacade from './src/expenses/facade/reportFacade';
+
 
 function report(expenses) {
-  const inputFactory = new InputFactory()
-  const decoratedExpenses = inputFactory.create(expenses)
-
-  const total = TotalExpenseCalculator.calculate(
-    decoratedExpenses
-  );
-
-  const mealExpenses = MealExpenseCalculator.calculate(
-    decoratedExpenses
-  );
+  const reportFacade = ReportFacade.create(expenses)
+  
+  const { total, mealExpenses } = reportFacade.mealAndTotal();
 
   console.log("Total Meal Expense:", mealExpenses);
   console.log("Total All Expense:", total);

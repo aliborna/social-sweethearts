@@ -13,7 +13,7 @@ module.exports = {
   testEnvironment: 'node',
   
   // Define the directories containing test files
-  testMatch: ['**/__tests__/**/*.test.(ts|tsx|js)'],
+  testMatch: ['**/src/**/**/*.test.(ts|tsx|js)'],
   
   // Optional: Collect test coverage
   collectCoverage: true,

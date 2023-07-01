@@ -1,15 +1,15 @@
-import { ExpenseInput, Expense  } from '../interfaces/interfaces';
-import ConcreteExpense from '../entities/ConcreteExpense';
+import { ExpenseInput, Expense } from '../interfaces/interfaces';
+import ExpenseDomain from '../entities/Expense';
 
 
 class InputFactory {
 
-  public create(expenses: ExpenseInput[]) {
+  static create(expenses: ExpenseInput[]) {
 
     const decoratedExpenses: Expense[] = [];
 
     for (const expenseInput of expenses) {
-      let expense: Expense = new ConcreteExpense(
+      let expense: Expense = new ExpenseDomain(
         expenseInput.amount,
         expenseInput.type
       );
